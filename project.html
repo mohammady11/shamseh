@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>علی شمسه | استاد زبان و ادبیات فارسی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        .persian-title {
+            font-family: 'Scheherazade New', serif;
+            font-weight: 700;
+        }
+        
+        .bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a5c36' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .green-gradient {
+            background: linear-gradient(135deg, #1a5c36 0%, #2d7d46 100%);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .border-green-light {
+            border-color: rgba(45, 125, 70, 0.2);
+        }
+        
+        .text-green-dark {
+            color: #1a5c36;
+        }
+        
+        .text-green-light {
+            color: #2d7d46;
+        }
+        
+        .ornament {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .ornament::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to left, #1a5c36, #2d7d46);
+            border-radius: 3px;
+        }
+        
+        .ornament-center::after {
+            right: 50%;
+            transform: translateX(50%);
+        }
+        
+        .floral-border {
+            border: 2px solid #1a5c36;
+            border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M0,0 L100,0 L100,100 L0,100 Z' fill='none' stroke='%231a5c36' stroke-width='2' stroke-dasharray='10,5'/%3E%3C/svg%3E") 2;
+        }
+        
+        .quote-icon {
+            color: #1a5c36;
+            opacity: 0.3;
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            right: 10px;
+        }
+        
+        .book-cover {
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .book-cover:hover {
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-active {
+            border-bottom: 2px solid #1a5c36;
+            color: #1a5c36;
+            font-weight: 600;
+        }
+        
+        .event-date {
+            background: linear-gradient(135deg, #1a5c36 0%, #2d7d46 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 8px 15px;
+            font-weight: 600;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(26, 92, 54, 0.2);
+        }
+        #photo{
+            position: relative;
+            top: -1rem;
+            object-fit: cover;
+        }
+        .c{
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+           /* استایل کلی کادر */
+           .melal-frame {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            box-shadow: 0 10px 25px rgba(56, 142, 60, 0.2);
+            border: 5px solid #388e3c;
+            max-width: 700px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* حاشیه تزئینی */
+        .melal-frame::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #388e3c, #81c784, #388e3c);
+        }
+        
+        /* عنوان اصلی */
+        .melal-title {
+            color: #1b5e20;
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #81c784;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+        
+        /* متن اصلی */
+        .melal-text {
+            color: #2e7d32;
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        
+        /* تزئینات خط */
+        .melal-line {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #388e3c, transparent);
+            margin: 20px 0;
+        }
+        
+        /* بخش امضا */
+        .melal-signature {
+            color: #1b5e20;
+            text-align: left;
+            font-size: 16px;
+            font-style: italic;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dotted #81c784;
+        }
+        
+        /* آیکون های تزئینی */
+        .melal-icon {
+            color: #388e3c;
+            margin-left: 8px;
+        }
+        
+        /* واکنشگرا برای دستگاه‌های موبایل */
+        @media (max-width: 768px) {
+            .melal-frame {
+                padding: 20px;
+                margin: 15px;
+                border-width: 4px;
+            }
+            
+            .melal-title {
+                font-size: 24px;
+            }
+            
+            .melal-text {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- نوار ناوبری -->
+    <nav class="green-gradient shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                        <i class="fas fa-book-open text-green-dark text-xl"></i>
+                    </div>
+                    <h1 class="persian-title text-white text-2xl">علی شمسه</h1>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="text-white hover:text-green-200 transition nav-active">خانه</a>
+                    <a href="#about" class="text-white hover:text-green-200 transition">معرفی</a>
+                    <a href="#books" class="text-white hover:text-green-200 transition">کتاب‌ها</a>
+                    <a href="#events" class="text-white hover:text-green-200 transition">مراسم‌ها</a>
+                    <a href="#contact" class="text-white hover:text-green-200 transition">تماس</a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- منوی موبایل -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-white hover:text-green-200 transition border-r-4 border-white pr-3 nav-active">خانه</a>
+                    <a href="#about" class="text-white hover:text-green-200 transition border-r-4 border-transparent pr-3">معرفی</a>
+                    <a href="#books" class="text-white hover:text-green-200 transition border-r-4 border-transparent pr-3">کتاب‌ها</a>
+                    <a href="#events" class="text-white hover:text-green-200 transition border-r-4 border-transparent pr-3">مراسم‌ها</a>
+                    <a href="#contact" class="text-white hover:text-green-200 transition border-r-4 border-transparent pr-3">تماس</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- بخش اصلی -->
+    <main>
+        <!-- هدر -->
+        <header id="home" class="bg-pattern py-12 md:py-20">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <div class="relative">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <h2 class="persian-title text-4xl md:text-5xl text-green-dark mb-6 leading-tight ornament">
+                                استاد زبان و ادبیات فارسی
+                            </h2>
+                        </div>
+                        <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+                            خوش آمدید به وب‌سایت رسمی <span class="text-green-dark font-bold">علی شمسه</span>، استاد زبان و ادبیات فارسی. در اینجا می‌توانید با آثار، کتاب‌ها و مراسم‌های ادبی برگزار شده توسط این استاد گرانقدر آشنا شوید.
+                        </p>
+                        <div class="flex space-x-4 space-x-reverse">
+                            <a href="#books" class="green-gradient text-white px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition">
+                                <i class="fas fa-book mr-2"></i> مشاهده کتاب‌ها
+                            </a>
+                            <a href="#events" class="bg-white text-green-dark border-2 border-green-dark px-6 py-3 rounded-lg shadow hover:shadow-xl transition">
+                                <i class="fas fa-calendar-alt mr-2"></i> مراسم‌های آینده
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="relative">
+                            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl floral-border">
+                                <!-- تصویر استاد - در حالت واقعی اینجا تصویر قرار می‌گیرد -->
+                                <div class="w-full h-full green-gradient flex items-center justify-center">
+                                    <i class="fas fa-user-tie text-white text-8xl">
+                                        <img src="photo.jpg"alt="photo" id="photo">
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-4 border border-green-light">
+                                <div class="text-center">
+                                    <p class="text-green-dark font-bold text-lg">12 سال</p>
+                                    <p class="text-gray-600 text-sm">تجربه تدریس</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- بخش معرفی -->
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="persian-title text-3xl md:text-4xl text-center text-green-dark mb-12 ornament ornament-center">
+                    درباره استاد
+                </h2>
+                
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-10 md:mb-0">
+                        <div class="bg-gray-100 rounded-2xl p-8 card-hover border border-green-light">
+                            <div class="text-center mb-6">
+                                <div class="w-24 h-24 mx-auto green-gradient rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-graduation-cap text-white text-4xl"></i>
+                                </div>
+                                <h3 class="persian-title text-2xl text-green-dark">سوابق علمی</h3>
+                            </div>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-light mt-1 ml-2"></i>
+                                    <span>فارغ التحصیل رشته ادبیات روایی در مقطع کارشناسی ارشد از دانشگاه ولیعصر رفسنجان</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-light mt-1 ml-2"></i>
+                                    <span> دارای مدرک حرفه ای نویسندگی از مدرسه نویسندگی استاد شاهین کلانتری</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-light mt-1 ml-2"></i>
+                                    <span>نویسنده کتاب خوابگرد</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-light mt-1 ml-2"></i>
+                                    <span>مدرس جلسه های نویسندگی در اداره آموزش و پرورش شهر بروجرد
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-2/3 md:pr-12">
+                        <div class="mb-8">
+                            <h3 class="persian-title text-2xl text-green-dark mb-4">زندگینامه</h3>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                <span class="text-green-dark font-bold">علی شمسه</span> علی شمسه
+                                متولد: ۱۳۶۸/۱۱/۱۹
+                                بروجرد
+                                فارغ التحصیل رشته اقتصاد در مقطع کارشناسی از دانشگاه آیت الله بروجردی
+                                فارغ التحصیل رشته ادبیات روایی در مقطع کارشناسی ارشد از دانشگاه ولیعصر رفسنجان
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                دبیر دبیرستان های آموزش و پرورش شهر بروجرد
+
+مدرس جلسه های نویسندگی در اداره آموزش و پرورش شهر بروجرد
+
+ دارای مدرک حرفه ای نویسندگی از مدرسه نویسندگی استاد شاهین کلانتری
+
+منتقد ادبی با گرایش به مکتب واقع‌گرایی جادویی و جریان روشنفکری ایران با الهام از آثار صادق هدایت، عباس معروفی و گابریل گارسیا مارکز
+
+منتقد سینما با نگاه تحلیلی به ساختار داستانی و زیبایی‌شناسی سینمای هالیوود
+
+علاقه مندی ها:
+حوزه‌های تخصصی: نقد داستان، نقد فیلم، تحلیل روایت، داستان کوتاه
+
+سبک‌های مورد علاقه: سورئال، جنایی، واقع‌گرایی جادویی، اگزیستانسیالیسم
+
+نویسندگان مورد تأثیر: صادق هدایت، عباس معروفی، گابریل گارسیا مارکز
+
+فیلم‌سازان مورد علاقه: هیچکاک، کوبریک، تارانتینو، دیوید لینچ         
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                کاخ اندیشه و فلسفه شخصی: 
+                                باور دارم هنر و ادبیات ابزاری برای آشکار کردن ناخودآگاه انسان‌اند؛ نقد برای من فقط ابزار تحلیل نیست، بلکه راهی برای شناخت جامعه و حقیقت درونی هنرمند است
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-emerald-50 to-green-50 border-2 border-green-200 rounded-2xl shadow-lg p-6 my-6 max-w-md mx-auto hover:shadow-xl transition-shadow duration-300">
+                            <!-- هدر باکس -->
+                            <div class="flex items-center justify-between mb-4 pb-3 border-b border-green-100">
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                                    <h3 class="text-green-800 font-bold text-lg">غزل عاشقانه</h3>
+                                </div>
+                                <div class="text-green-600 text-sm">
+                                    <i class="fas fa-feather-alt ml-1"></i>
+                                    علی شمسه
+                                </div>
+                            </div>
+                            
+                            <!-- محتوای شعر -->
+                            <div class="text-center">
+                                <!-- بیت اول -->
+                                <div class="mb-6">
+                                    <p class="text-green-900 text-xl leading-10 font-medium">
+                                        زین لبانِ سرخ، رُخ بر جام ماند
+                                    </p>
+                                    <p class="text-green-900 text-xl leading-10 font-medium">
+                                        نقشِ عشقی پُر زِ رنگِ نام ماند
+                                    </p>
+                                </div>
+                                
+                                <!-- خط تزئینی -->
+                                <div class="flex items-center justify-center my-4">
+                                    <div class="w-12 h-px bg-green-300"></div>
+                                    <i class="fas fa-heart text-green-400 mx-3"></i>
+                                    <div class="w-12 h-px bg-green-300"></div>
+                                </div>
+                                
+                                <!-- بیت دوم -->
+                                <div class="mt-6">
+                                    <p class="text-green-900 text-xl leading-10 font-medium">
+                                        جامِ مِی نوشیدم و رازِ نهان
+                                    </p>
+                                    <p class="text-green-900 text-xl leading-10 font-medium">
+                                        چون شرابی، در میانِ کام ماند
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- فوتر باکس -->
+                            <div class="mt-6 pt-4 border-t border-green-100 flex justify-between items-center text-sm">
+                                <div class="text-green-600">
+                                    <i class="fas fa-calendar-alt ml-1"></i>
+                                    سروده در بهار ۱۴۰۳
+                                </div>
+                                <div class="text-green-500">
+                                    <i class="fas fa-book-open"></i>
+                                    غزل فارسی
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش کتاب‌ها -->
+        <section id="books" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="persian-title text-3xl md:text-4xl text-center text-green-dark mb-12 ornament ornament-center">
+                    کتاب‌های منتشر شده
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  c">
+                            <!-- کتاب ۱ -->
+                            <div class="bg-white rounded-xl overflow-hidden card-hover border border-green-light shadow-md">
+                        <!-- بخش بالایی با رنگ سبز منطبق بر عکس -->
+                        <div class="h-48 flex items-center justify-center" style="background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);">
+                            <div class="book-cover w-32 h-40 bg-white rounded-md shadow-lg flex items-center justify-center">
+                                <i class="fas fa-book text-green-800 text-5xl"></i>
+                            </div>
+                        </div>
+                        <!-- محتوای پایینی -->
+                        <div class="p-6">
+                            <div class="event-date mb-4 text-white-500">چاپ اول: 1404</div>
+                            <h3 class="persian-title text-2xl text-green-900 mb-3">خوابگرد</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                 کتابی در باره ی داستانی جنایی و  رمزالود که ذهن شما را درگیر می کند و....
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-800 font-bold">80 صفحه</span>
+                                <a href="#" class="text-green-600 hover:text-green-800 transition flex items-center">
+                                    جزئیات بیشتر
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                            
+                            </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#" class="green-gradient text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition inline-block">
+                        <i class="fas fa-list mr-2"></i> مشاهده همه کتاب‌ها
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش مراسم‌ها -->
+        <section id="events" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="persian-title text-3xl md:text-4xl text-center text-green-dark mb-12 ornament ornament-center">
+                    مراسم‌های برگزار شده
+                </h2>
+                
+                <div class="space-y-10">
+                    <!-- مراسم ۱ -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-2xl overflow-hidden border border-green-light">
+                        <div class="md:w-1/3">
+                            <div class="h-64 green-gradient flex items-center justify-center p-8">
+                                <div class="text-center text-white">
+                                    <div class="text-5xl font-bold mb-2">16</div>
+                                    <div class="text-xl">اردیبهشت</div>
+                                    <div class="text-lg mt-2">1404</div>
+                                    <div class="mt-4">
+                                        <i class="fas fa-users text-3xl opacity-80"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 p-6 md:p-8">
+                            <h3 class="persian-title text-2xl text-green-dark mb-3">همایش‌ ادبی درس خوان هشتم فارسی(3)</h3>
+                            <p class="text-gray-600 mb-4">
+                                 همایش ادبی درس خوان هشتم فارسی(3) با اجرای گروه نقالی هما و همکاری گروه آموزشی ادبیات متوسطه دوم
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <span class="bg-green-100 text-green-dark px-4 py-2 rounded-full text-sm">
+                                    <i class="fas fa-map-marker-alt ml-1"></i>پژوهشسرای جابربن حیان بروجرد
+                                </span>
+                                <span class="bg-green-100 text-green-dark px-4 py-2 rounded-full text-sm">
+                                    <i class="fas fa-user-friends ml-1"></i> 70 نفر شرکت‌کننده
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- مراسم ۲ -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-2xl overflow-hidden border border-green-light">
+                        <div class="md:w-1/3">
+                            <div class="h-64 green-gradient flex items-center justify-center p-8">
+                                <div class="text-center text-white">
+                                    <div class="text-5xl font-bold mb-2">16</div>
+                                    <div class="text-xl">مهر</div>
+                                    <div class="text-lg mt-2">1404</div>
+                                    <div class="mt-4">
+                                        <i class="fas fa-users text-3xl opacity-80"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 p-6 md:p-8">
+                            <h3 class="persian-title text-2xl text-green-dark mb-3">بزرگداشت خداوندگار چکامه پارسی مولانا</h3>
+                            <p class="text-gray-600 mb-4">
+                                 بزرگداشت خداوندگار چکامه پارسی مولانا به پویش گروه صنم گریزپا ویژه مدیران،استادان، عاشقان ادب پارسی و دانش آموزان دختر                           </p>
+                            <div class="flex flex-wrap gap-4">
+                                <span class="bg-green-100 text-green-dark px-4 py-2 rounded-full text-sm">
+                                    <i class="fas fa-map-marker-alt ml-1"></i> پژوهشسرای جابربن حیان بروجرد
+                                </span>
+                                <span class="bg-green-100 text-green-dark px-4 py-2 rounded-full text-sm">
+                                    <i class="fas fa-user-friends ml-1"></i> ۸۰ نفر شرکت‌کننده
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- مراسم ۳ -->
+                    <div class="flex flex-col md:flex-row items-center bg-gray-50 rounded-2xl overflow-hidden border border-green-light">
+                        <div class="md:w-1/3">
+                            <div class="h-64 green-gradient flex items-center justify-center p-8">
+                                <div class="text-center text-white">
+                                    <div class="text-5xl font-bold mb-2">9</div>
+                                    <div class="text-xl">بهمن</div>
+                                    <div class="text-lg mt-2">1404</div>
+                                    <div class="mt-4">
+                                        <i class="fas fa-book-reader text-3xl opacity-80"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 p-6 md:p-8">
+                            <h3 class="persian-title text-2xl text-green-dark mb-3">رونمایی از کتاب خوابگرد</h3>
+                            <p class="text-gray-600 mb-4">
+                                مراسم رونمایی از اولین کتاب استاد شمسه با عنوان "خوابگرد"  با حضور اصحاب رسانه، اساتید دانشگاه و علاقه‌مندان به ادبیات فارسی در پژوهشسرای جابربن حیان برگزار خواهد شد.
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <span class="bg-green-100 text-green-dark px-4 py-2 rounded-full text-sm">
+                                    <i class="fas fa-map-marker-alt ml-1"></i>پژوهشسرای جابربن حیان بروجرد
+                                </span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <div class="bg-green-50 rounded-xl p-8 border border-green-light max-w-2xl mx-auto">
+                        <h3 class="persian-title text-2xl text-green-dark mb-4">مراسم آینده</h3>
+                        <p class="text-gray-700 mb-6">مراسم رونمایی از کتاب خوابگرد</p>
+                        <div class="event-date mx-auto">بهمن 1404</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <h2 class="persian-title text-3xl md:text-4xl text-center text-green-dark mb-12 ornament ornament-center">
+            متون و دلنوشته ها
+        </h2>
+        <div class="melal-frame">
+            <div class="melal-title">
+                <span class="melal-icon">🎍</span>
+                آدینه های مَخمَلین
+                <span class="melal-icon">🎍</span>
+            </div>
+            
+            <div class="melal-text">
+                یادم می آمد؛
+                پلک هام روی هم بوسه زدند که یادم آمد،روزِ جمعه وقتی پرده های کرکره ایِ اتاقم پلک هاشونو باز می‌کردند نور لطیفی به اتاقم وارد شد؛
+                به یکباره فهمیدم بیدار شدم،نه با زنگ ساعتِ کوکی ام،بلکه با صدای نازِ استاد"علیرضا جاویدنیا"،خنده های بانو"مینو غزنوی" و امیدهایی که در شیرین سخنی های"منوچهر نوذری" در رادیویِ طاقچه خونمون که رویِ موج FM و برنامه شیرینِ "صبح جمعه با شما" بود.
+                بو کشیدم و آه می کشیدم و دِریغ ها می گفتم از بویِ نابِ "ریحانی" که مادربزرگم داشت پاک می کرد و نانِ سنگکی که از شادابی و رایحه اش با من سخن ها می گفت،
+                همه چیز متفاوت بود،
+                عطر ریحان،خنده نانِ سنگک،مهر مادربزرگ،رادیو و برنامه هایش...
+                نه فکر دلار بودم،نه نرخ ارز،
+                گرانی ها در هیاهویِ مهربانی،هاج و واج بودند..
+                ای کاش میشد گذرگهِ تاریخ را در قابِ صبحِ آن جمعه های مخملین،متوقف کرد.
+            </div>
+            
+            <div class="melal-line"></div>
+            
+            <div class="melal-text" style="text-align: center; font-size: 20px;">
+                <span class="melal-icon">🌹</span>
+                آدینه تان شاد و لبتان خندان،لبخندهایی که به آرامشی بی پایان گره خورده باشند.
+                <span class="melal-icon">🌹</span>
+            </div>
+            
+            <div class="melal-signature">
+                <span class="melal-icon">✍</span>
+                علی شمسه
+            </div>
+        </div>
+        <!-- کادر جدید با کلاس‌های یکسان -->
+    <div class="melal-frame">
+        <div class="melal-title">
+            <span class="melal-icon">👈</span>
+            یکم آبان ماه، بزرگداشت پدر نثر پارسی؛ ابوالفضل بیهقی
+            <span class="melal-icon">👈</span>
+        </div>
+        
+        <div class="melal-text">
+            ابوالفضل بیهقی، پدیدآورنده کتابِ گرانسنگِ "تاریخ بیهقی"، نگارنده ای که با قدرت قلمِ خود، کتابی تاریخی را به نوشته ای ادبی و هنری نمایان کرد.
+            "تاریخ بیهقی" را می توان به عنوان لازمه ای سترگ برای "سینماتوگراف" دانست.
+            اثری که با داستان پردازی و خلقِ بخش های ادبی و هنری می تواند به عنوان "خط داستانی" در صنعت سینما و فیلمنامه نویسی به کار گرفته شود.
+        </div>
+        
+        <div class="melal-text">
+            در این کتاب شگرف، هر آن چیزی که به دست می آوریم درباره سلطان مسعود، چگونگی پیشرفت و تکامل به قدرت رسیدنش و در پایان شکستش در جنگ دندانقان و کشته شدنش، بُنِ جانِ کتاب را در قالب خط داستانِ سترگی، نمایان می کند و سایر شخصیت ها و رویدادها گِرد تا گردِ ماجرایِ مسعود اتفاق می افتد که روایت اصلی داستان را شکل می دهد.
+            و می دانیم برای نگارش فیلمنامه نیاز به داستان است، و داستان خود نیاز به خطِ داستان دارد و بدونِ این دو فیلمنامه ای نخواهیم داشت.
+        </div>
+        
+        <div class="melal-line"></div>
+        
+        <div class="melal-text" style="text-align: center; font-size: 20px;">
+            <span class="melal-icon">❤️</span>
+            یکم آبان روز ملی بزرگداشت این نگارنده گرانسنگ، همایون باد.
+            <span class="melal-icon">❤️</span>
+        </div>
+        
+        <div class="melal-signature">
+            <span class="melal-icon">✍</span>
+            علی شمسه
+        </div>
+    </div>
+    <div class="melal-frame">
+        <div class="melal-title">
+            <span class="melal-icon">👈</span>
+            گرامی استاد "ناصر تقوایی" درگذشت
+            <span class="melal-icon">👈</span>
+        </div>
+        
+        <div class="melal-text">
+            <span style="color: #d32f2f; font-weight: bold;">♦️</span> کارگردان، نویسنده و ایده‌پردازِ ادب‌دوست و صاحب سبک و دارای "نظریه مولف" در سینما بود.
+            کارگردانی که کنار هنرمندانی چون: گرامی استاد "بهرام بیضایی" و "داریوش مهرجویی"، موجی نو را در سینمای ایران ایجاد کردند.
+        </div>
+        
+        <div class="melal-text">
+            روانشاد ناصرِ تقوایی در کنار استاد بهرام بیضایی از چهار نویسندگانی بودند که از ادبِ پارسی درک کامل و سترگی داشتند.
+            فیلمِ "آرامش در حضور دیگران" که از داستان‌های کوتاه "غلامحسین ساعدی" است به کارگردانی این هنرمند توانست چارچوبِ این داستان را به شیرینی نمایان کند.
+        </div>
+        
+        <div class="melal-line"></div>
+        
+        <div class="melal-text" style="text-align: center; font-size: 20px;">
+            <span class="melal-icon">🕊️</span>
+            روانش شاد و یادش گرامی
+            <span class="melal-icon">🕊️</span>
+        </div>
+        
+        <div class="melal-signature">
+            <span class="melal-icon">✍</span>
+            علی شمسه
+        </div>
+    </div>
+    <div class="melal-frame">
+        <div class="melal-title">
+            <span class="melal-icon">🍂</span>
+            شامگاه دل‌انگیز پاییزی
+            <span class="melal-icon">🍂</span>
+        </div>
+        
+        <div class="melal-text">
+            در شامگاهِ دل‌انگیز پاییزی، آنگاه که آسمانِ بروجردِ من، ژاکتی خاکستری بر تن کرده بود و نم‌نم باران بر گونه‌های خیسِ برگ‌ها می‌غلتید، گام‌هایم هراسان به سویِ "بیشه کبیری" روانه شد.
+            بویِ خوشِ خاکِ باران‌خورده و نسیمی خنک، گونه‌هایم را نوازش می‌کرد.
+        </div>
+        
+        <div class="melal-text">
+            سوناتِ مهتابِ "بتهوون" در گوش‌هایم نجوا می‌کرد. بر فرازِ درختانِ چنارِ کهنسال، پرندگان سمفونیِ پاییزیِ خود را می‌نواختند؛
+            در جادویِ این همه شگفتی، پا در میانِ برگ‌های قهرکرده درختان می‌گذاشتم که زیر قدم‌هایم خِش‌خِش‌کنان، رازهای پاییز را زمزمه می‌کردند.
+        </div>
+        
+        <div class="melal-text">
+            ناگهان، در میان درختان درهم‌تنیده بیشه، نوری کم‌فروغ چشمم را نوازش داد. نزدیک‌تر رفتم؛ آتشی کوچک، رها شده از دستانِ گرمِ تابستان، در زیر خاکسترها هِیهات می‌کشید.
+            کنار آن گرمای پنهان و خلوتِ دلبرانه، چشمانم به زیرِ برگ‌های چناری که انگار با اشکِ آسمان غُسل کرده بودند، شرمگینانه آرمیده بود:...
+            <span style="font-weight: bold; color: #d32f2f;">📜دیوان حافظ!📜</span>
+        </div>
+        
+        <div class="melal-text">
+            درست دیدم..آری.. گویی خودِ خواجه شیراز، در این بیشه خلوت، مهمان لحظه‌های تنهایی‌ام شده بود. با دستانی لرزان، کتاب را از زیر برگ‌ها بیرون کشیدم.
+            برگش زدم و غزلی را زیرِ لب خواندم و در هم‌نوایی با "سونات مهتاب بتهوون"، آرامشی عمیق وجودم را فرا گرفت.
+        </div>
+        
+        <div class="melal-text">
+            از جای برخاستم. لبخندی زاویه‌دار بر لبانم نقش بسته بود. 
+            پیش از آن گمان می‌کردم غرقِ در <span style="font-weight: bold;">🎭زندگیِ بالماسکه🎭</span> هستم ولی پس از آن پنداشتم که روحم، در سکوتِ میانِ دو نُتِ سوناتِ بتهوون، یا در قافیه گمشده‌ای از شعر حافظ، سرگردان است.
+        </div>
+        
+        <div class="melal-line"></div>
+        
+        <div class="melal-text" style="text-align: center; font-size: 20px;">
+            <span class="melal-icon">❤️</span>
+            فرارسیدنِ بیستمِ ماهِ مهر، بزرگداشت خواجه شمس‌الدین محمد "حافظ شیرازی" همایون باد
+            <span class="melal-icon">❤️</span>
+        </div>
+        
+        <div class="melal-signature">
+            <span class="melal-icon">✍</span>
+            علی شمسه
+        </div>
+    </div>
+    <div class="melal-frame">
+        <div class="melal-title">
+            <span class="melal-icon">🕋</span>
+            قونیه در خاموشی فرو رفت
+            <span class="melal-icon">🕋</span>
+        </div>
+        
+        <div class="molana-line">
+            <span class="diamond">🔸</span>قونیه در خاموشی فرو رفت..
+        </div>
+        
+        <div class="molana-line">
+            <span class="circle">🔹</span>گویی چیزی در آستانه "نیفتادن" است
+        </div>
+        
+        <div class="molana-line">
+            <span class="diamond">🔸</span>هشتم مهر، سکوتِ پیش از هَیاهو
+        </div>
+        
+        <div class="molana-line">
+            <span class="circle">🔹</span>بر فرازِ آرامگاهِ او؛
+        </div>
+        
+        <div class="molana-line">
+            <span class="diamond">🔸</span>شمسِ تبریزی، آغازِ رقص بود
+        </div>
+        
+        <div class="molana-line">
+            <span class="circle">🔹</span>سماع، نه چرخشِ تَن.. که دیالِکتیکِ فرکانس و روح
+        </div>
+        
+        <div class="molana-line">
+            <span class="diamond">🔸</span>علم و عشق؛ دو نُتِ هم‌کوک در سَمفونیِ وحدت..
+        </div>
+        
+        <div class="molana-line">
+            <span class="circle">🔹</span>هر دَوَران، نغمه‌ای از بی‌نهایت.......
+        </div>
+        
+        <div class="melal-line"></div>
+        
+        <div class="melal-text" style="text-align: center; font-size: 20px;">
+            <span class="melal-icon">🌹</span>
+            ۸ ماهِ مهر، روزِ بزرگداشت "مولانا" همایون
+            <span class="melal-icon">🌹</span>
+        </div>
+        
+        <div class="melal-signature">
+            <span class="melal-icon">✍</span>
+            علی شمسه
+        </div>
+    </div>
+    <div class="melal-frame">
+        <div class="melal-title">
+            <span class="melal-icon">👈</span>
+            پیرِ خاطره‌بازِ ادبِ پارسی
+            <span class="melal-icon">👈</span>
+        </div>
+        
+        <div class="section-title">
+            <span class="circle">♦️</span>
+            پیشکش به گروه آموزشی ادبِ پارسی بروجرد
+            <span class="circle">♦️</span>
+        </div>
+        
+        <div class="melal-text">
+            در قهوه‌خانه "دیگِ دولَتبا" که پُشتِ کوچه‌ای سرگردون، قرار داشت نشسته بودم که قهوه‌چی نوار کاسِت رو با خودکارِ بیکی که جوهرش خُروپُف می‌کرد و میونِ سَبابه و وُسطاش، بالاپایین می‌شد چرخوند و چَق‌چَقِ قرقرهِ نوار در ضبطِ صوتِ قراضه‌ای که رویِ موجِ AM خوابیده بود، به گوشم رسید و خوانده شد:
+        </div>
+        
+        <div class="quote-box">
+            <span class="circle">●</span>زنبیلِ قدیمی‌ام بویِ پیرمردی را می‌داد که آن روز کمی به سمت راست، یک حبه قند را در استکانی از چای و لاشه سیگارها، می‌انداخت و می‌گفت:
+            با <span class="highlight">"سماعِ دیوانِ شمس تبریزی"</span> مِی‌گُسارِ <span class="highlight">"شاهنامه"</span> خواهَم شد. <span class="highlight">"تحفه‌العراقینِ خاقانی"</span>، چشمه‌ی شیک و پیکی است که از آن پیمانه‌ای می‌نوشم و <span class="highlight">"مخزن‌الاسرار"</span>، روحِ من است که به سماع، پریشان پیلی‌پیلی می‌رود. <span class="highlight">"هفت اورنگِ جامی"</span> هفت پرده از رویایِ چِرکینِ مَرا می‌دَرانَد، تا رهایی را گَز کنم.....
+        </div>
+        
+        <div class="melal-text">
+            سیگارِ دوزاری در کنجِ لبِ ترک‌خورده قهوه‌چی هِی پُک می‌خورد و اونم گوش می‌داد....
+        </div>
+        
+        <div class="quote-box">
+            <span class="circle">●</span>پیرمرد می‌گفت: و این تَق‌تَقِ سخنِ <span class="highlight">"سعدی"</span> ست، که بالِ پروازم می‌دهد و سرنوشتِ گَسِ بدونِ شعرِ <span class="highlight">"لسان‌الغیب"</span> را دندان به دندان خواهم خایید...
+        </div>
+        
+        <div class="melal-text">
+            که ناگهان قرقرهِ نوار، یَواشَکی شُدُ.. شُدُ..شُدُ... مُردُ مُر.. مُ و ُ ُ ......
+        </div>
+        
+        <div class="melal-text">
+            قهوه‌خانه از سکوت، زوزه می‌کشید.. قهوه‌چی هِی سرفه‌های خَشدار می‌زد.. خواستم آهِ غلیظی بکشم، نشُد، قورتش دادم.. جیکِ قهوه‌خانه درنمیومد... فقط تیک‌تیکِ ساعتی که با یکی و نصفی میخِ سیاه رو دیوارِ سفید مونده بود، میومد..
+        </div>
+        
+        <div class="melal-text">
+            از جا جَستَم.. گاماس‌گاماس رفتم که برم و ... یهو قهوه‌چی با ریشه‌های لُنگی که دور گردنش هاج و واج آویزون بودن، لبِ ترک‌خورده‌شو مالید و گفت:
+        </div>
+        
+        <div class="poem-box">
+            <span class="circle">♻️</span>شکّرشکن شوند همه طوطیانِ هند<br>
+            زین قندِ پارسی که به بنگاله می‌رود<span class="circle">♻️</span>
+        </div>
+        
+        <div class="melal-text">
+            بی‌سَر و سامون نگاش کردم.. بدجور کوفته بودم.. هِق‌هِق کنان رفتم...
+        </div>
+        
+        <div class="melal-line"></div>
+        
+        <div class="melal-text" style="text-align: center; font-size: 20px;">
+            <span class="melal-icon">🌹</span>
+            روز ادبِ پارسی همایون
+            <span class="melal-icon">❤️</span>
+        </div>
+        
+        <div class="melal-signature">
+            <span class="melal-icon">✍</span>
+            علی شمسه
+        </div>
+    </div>
+        
+        <!-- بخش تماس -->
+        <section id="contact" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="persian-title text-3xl md:text-4xl text-center text-green-dark mb-12 ornament ornament-center">
+                    تماس با استاد
+                </h2>
+                
+                <div class="flex flex-col md:flex-row justify-between items-center max-w-4xl mx-auto">
+                    <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                        <div class="bg-white rounded-xl p-8 shadow-lg border border-green-light">
+                            <h3 class="persian-title text-2xl text-green-dark mb-6">اطلاعات تماس</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 green-gradient rounded-lg flex items-center justify-center ml-4">
+                                        <i class="fas fa-envelope text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-green-dark font-bold mb-1">ایمیل</h4>
+                                        <p class="text-gray-700">ali.shamseh@example.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 green-gradient rounded-lg flex items-center justify-center ml-4">
+                                        <i class="fas fa-phone text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-green-dark font-bold mb-1">تلفن</h4>
+                                        <p class="text-gray-700">09358985706</p>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="bg-white rounded-xl p-8 shadow-lg border border-green-light">
+                            <h3 class="persian-title text-2xl text-green-dark mb-6">ارسال پیام</h3>
+                            <form id="contact-form">
+                                <div class="mb-4">
+                                    <label class="block text-green-dark mb-2" for="name">نام و نام خانوادگی</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-dark" placeholder="نام شما">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="block text-green-dark mb-2" for="email">ایمیل</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-dark" placeholder="example@domain.com">
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label class="block text-green-dark mb-2" for="message">پیام</label>
+                                    <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-dark" placeholder="متن پیام شما..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="green-gradient text-white w-full py-3 rounded-lg shadow-lg hover:shadow-xl transition">
+                                    <i class="fas fa-paper-plane ml-2"></i> ارسال پیام
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- پاورقی -->
+    <footer class="green-gradient text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2 space-x-reverse mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-book-open text-green-dark text-xl"></i>
+                        </div>
+                        <h2 class="persian-title text-2xl">علی شمسه</h2>
+                    </div>
+                    <p class="text-green-200">استاد زبان و ادبیات فارسی</p>
+                </div>
+                
+                <div class="flex space-x-6 space-x-reverse text-2xl">
+                    <a href="#" class="text-white hover:text-green-200 transition">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-green-200 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-green-200 transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-green-200 transition">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-300 mt-8 pt-8 text-center text-green-200">
+                <p>© کلیه حقوق این وب‌سایت متعلق به استاد علی شمسه می‌باشد 1404</p>
+                <p class="mt-2 text-sm">طراحی شده با افتخار برای معرفی گنجینه‌های ادبیات فارسی توسط تیم  برنامه نویسی دکس وب (محمد یونس روزبهانی،09166291434)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- دکمه بازگشت به بالا -->
+    <button id="back-to-top" class="fixed bottom-6 left-6 w-12 h-12 green-gradient text-white rounded-full shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // منوی موبایل
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // دکمه بازگشت به بالا
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // فرم تماس
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && message) {
+                alert('پیام شما با موفقیت ارسال شد. با تشکر از تماس شما!');
+                document.getElementById('contact-form').reset();
+            } else {
+                alert('لطفاً تمام فیلدهای فرم را پر کنید.');
+            }
+        });
+        
+        // هایلایت لینک‌های ناوبری هنگام اسکرول
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('nav-active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('nav-active');
+                }
+            });
+        });
+        
+        // انیمیشن برای کارت‌ها هنگام اسکرول
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // اعمال انیمیشن به عناصر
+        document.querySelectorAll('.card-hover').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
